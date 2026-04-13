@@ -176,7 +176,7 @@ namespace DealerSelfSupplySystem.DealerExtension
                 foreach (var item in items)
                 {
                     if (item != null &&
-                        item.Category == EItemCategory.Product &&
+                        item.TryCast<ProductItemInstance>() != null &&
                         !item.Name.Contains("Unpackaged"))
                     {
                         validItemTypes++;
@@ -313,7 +313,7 @@ namespace DealerSelfSupplySystem.DealerExtension
                 foreach (var item in storageItems)
                 {
                     if (item != null &&
-                        item.Category == EItemCategory.Product &&
+                        item.TryCast<ProductItemInstance>() != null &&
                         !item.Name.Contains("Unpackaged"))
                     {
                         validItems.Add(item);
