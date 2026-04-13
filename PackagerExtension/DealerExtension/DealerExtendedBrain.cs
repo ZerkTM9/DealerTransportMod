@@ -247,23 +247,28 @@ namespace DealerSelfSupplySystem.DealerExtension
                 {
                     // --- Physical walk to storage ---
                     Vector3 homePosition = Dealer.transform.position;
+                    Vector3 storagePosition = storageEntity.transform.position;
                     float timeout = Mathf.Clamp(travelTime * 5f, 30f, 120f);
+                    const float ARRIVAL_DIST = 2.5f;
 
-                    movement.SetDestinationPosition(storageEntity.transform.position);
+                    movement.SetDestination(storagePosition);
 
                     float elapsed = 0f;
-                    while (!movement.isAtDestination && elapsed < timeout)
+                    while (elapsed < timeout)
                     {
+                        bool arrived = !movement.hasDestination ||
+                                       Vector3.Distance(Dealer.transform.position, storagePosition) <= ARRIVAL_DIST;
+                        if (arrived) break;
+
                         if (Dealer.currentContract != null && _canBeInturrupted)
                         {
                             Core.MelonLogger.Msg($"Dealer {Dealer.fullName} received a contract during walk, aborting");
-                            movement.EndSetDestination();
+                            movement.Stop();
                             yield break;
                         }
                         elapsed += Time.deltaTime;
                         yield return null;
                     }
-                    movement.EndSetDestination();
 
                     if (elapsed >= timeout)
                         Core.MelonLogger.Warning($"Dealer {Dealer.fullName} timed out walking to storage, collecting anyway");
@@ -285,15 +290,17 @@ namespace DealerSelfSupplySystem.DealerExtension
                     }
 
                     // --- Physical walk back to original position ---
-                    movement.SetDestinationPosition(homePosition);
+                    movement.SetDestination(homePosition);
 
                     elapsed = 0f;
-                    while (!movement.isAtDestination && elapsed < timeout)
+                    while (elapsed < timeout)
                     {
+                        bool returned = !movement.hasDestination ||
+                                        Vector3.Distance(Dealer.transform.position, homePosition) <= ARRIVAL_DIST;
+                        if (returned) break;
                         elapsed += Time.deltaTime;
                         yield return null;
                     }
-                    movement.EndSetDestination();
 
                     Core.MelonLogger.Msg($"Dealer {Dealer.fullName} has returned from storage {storageEntity.name}");
                 }
