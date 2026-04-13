@@ -16,6 +16,7 @@ namespace DealerSelfSupplySystem
         public static MelonPreferences_Entry<int> maxDealersPerStorage;
         public static MelonPreferences_Entry<float> dealerStorageCheckInterval;
         public static MelonPreferences_Entry<float> dealerCollectionShareRate;
+        public static MelonPreferences_Entry<float> dealerTargetFillLevel;
 
         public Config()
         {
@@ -29,6 +30,9 @@ namespace DealerSelfSupplySystem
 
             dealerCollectionShareRate = balanceCategory.CreateEntry("DealerCollectionShareRate", 0.5f,
                 description: "Percentage of empty inventory slots a dealer will try to fill when multiple dealers share a storage (0.1-1.0).");
+
+            dealerTargetFillLevel = balanceCategory.CreateEntry("DealerTargetFillLevel", 0.8f,
+                description: "Target inventory fill level for dealers (0.0-1.0). Dealers stop collecting once they reach this fill percentage.");
 
             dealerStorageUIClosedByDefault = balanceCategory.CreateEntry("DealerStorageUIClosedByDefault", true,
                 description: "Set the dealer storage UI to be collapsed by default.");
