@@ -34,6 +34,8 @@ namespace DealerSelfSupplySystem.DealerExtension
     }
     public class DealerStorageManager
     {
+        public static DealerStorageManager Instance { get; private set; }
+
         // Modified to support multiple dealers per storage
         internal Dictionary<StorageEntity, List<DealerExtendedBrain>> _dealerStorageDictionary;
         internal Dictionary<StorageEntity, DealerExtensionUI> _dealerStorageUIDictionary;
@@ -48,6 +50,7 @@ namespace DealerSelfSupplySystem.DealerExtension
 
         public DealerStorageManager()
         {
+            Instance = this;
             _dealerStorageDictionary = new Dictionary<StorageEntity, List<DealerExtendedBrain>>();
             _dealerStorageUIDictionary = new Dictionary<StorageEntity, DealerExtensionUI>();
             _storageMenuStorageEntityDictionary = new Dictionary<StorageMenu, StorageEntity>();
@@ -230,17 +233,23 @@ namespace DealerSelfSupplySystem.DealerExtension
                 StorageEntity storageEntity = kvp.Key;
                 List<DealerExtendedBrain> dealers = kvp.Value.ToList(); // Create a copy for safe iteration
 
-                // Process each dealer assigned to this storage
-                foreach (var dealerEx in dealers)
+                // Remove stale dealer references before processing
+                dealers.RemoveAll(d => d?.Dealer == null);
+                foreach (var stale in dealers.Where(d => d?.Dealer == null).ToList())
                 {
-                    // Skip invalid dealers
-                    if (dealerEx?.Dealer == null)
-                    {
-                        Core.MelonLogger.Warning($"Removing invalid dealer reference from storage {storageEntity.name}");
-                        _dealerStorageDictionary[storageEntity].Remove(dealerEx);
-                        continue;
-                    }
+                    Core.MelonLogger.Warning($"Removing invalid dealer reference from storage {storageEntity.name}");
+                    _dealerStorageDictionary[storageEntity].Remove(stale);
+                }
 
+                // Sort dealers by fill percentage ascending so the most depleted dealer
+                // has priority and collects first, getting the largest fair share
+                var prioritizedDealers = dealers
+                    .Where(d => d?.Dealer != null)
+                    .OrderBy(d => d.GetInventoryFillPercentage())
+                    .ToList();
+
+                foreach (var dealerEx in prioritizedDealers)
+                {
                     totalAssignmentsChecked++;
 
                     // Only try to collect if the dealer needs items
