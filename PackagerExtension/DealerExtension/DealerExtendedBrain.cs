@@ -1,5 +1,6 @@
 ﻿using Il2CppScheduleOne.Economy;
 using Il2CppScheduleOne.ItemFramework;
+using Il2CppScheduleOne.NPCs;
 using Il2CppScheduleOne.Product;
 using Il2CppScheduleOne.Storage;
 using MelonLoader;
@@ -228,36 +229,104 @@ namespace DealerSelfSupplySystem.DealerExtension
             LastProcessedStorageName = storageEntity.name;
             float travelTime = CalculateTravelTime(storageEntity);
 
-            Core.MelonLogger.Msg($"Dealer {Dealer.fullName} is traveling to storage {storageEntity.name}, ETA: {travelTime:F1}s");
+            // Try to get the NPC movement component for physical walking
+            NPCMovement movement = null;
+            if (Config.dealerPhysicalMovement.Value)
+            {
+                try { movement = Dealer.GetComponent<NPCMovement>(); } catch { }
+            }
+
+            if (movement != null)
+                Core.MelonLogger.Msg($"Dealer {Dealer.fullName} is walking to storage {storageEntity.name}");
+            else
+                Core.MelonLogger.Msg($"Dealer {Dealer.fullName} is traveling to storage {storageEntity.name} (ETA: {travelTime:F1}s)");
+
             try
             {
-                yield return new WaitForSeconds(travelTime);
-
-                if (Dealer.currentContract != null && _canBeInturrupted)
+                if (movement != null)
                 {
-                    Core.MelonLogger.Msg($"Dealer {Dealer.fullName} received a contract during travel, aborting item collection");
-                    IsProcessingItems = false;
-                    yield break;
-                }
+                    // --- Physical walk to storage ---
+                    Vector3 homePosition = Dealer.transform.position;
+                    float timeout = Mathf.Clamp(travelTime * 5f, 30f, 120f);
 
-                Core.MelonLogger.Msg($"Dealer {Dealer.fullName} reached storage {storageEntity.name}, collecting items");
-                int itemsCollected = AddItemsFromStorage(storageEntity);
+                    movement.SetDestinationPosition(storageEntity.transform.position);
 
-                if (itemsCollected > 0)
-                {
-                    Core.MelonLogger.Msg($"Dealer {Dealer.fullName} collected {itemsCollected} items from {storageEntity.name}");
-                    TotalItemsCollected += itemsCollected;
-                    LastCollectionTime = DateTime.Now;
-                    Dealer.SendTextMessage(Messages.GetRandomItemCollectionMessage(true));
+                    float elapsed = 0f;
+                    while (!movement.isAtDestination && elapsed < timeout)
+                    {
+                        if (Dealer.currentContract != null && _canBeInturrupted)
+                        {
+                            Core.MelonLogger.Msg($"Dealer {Dealer.fullName} received a contract during walk, aborting");
+                            movement.EndSetDestination();
+                            yield break;
+                        }
+                        elapsed += Time.deltaTime;
+                        yield return null;
+                    }
+                    movement.EndSetDestination();
+
+                    if (elapsed >= timeout)
+                        Core.MelonLogger.Warning($"Dealer {Dealer.fullName} timed out walking to storage, collecting anyway");
+
+                    Core.MelonLogger.Msg($"Dealer {Dealer.fullName} reached storage {storageEntity.name}, collecting items");
+                    int itemsCollected = AddItemsFromStorage(storageEntity);
+
+                    if (itemsCollected > 0)
+                    {
+                        Core.MelonLogger.Msg($"Dealer {Dealer.fullName} collected {itemsCollected} items from {storageEntity.name}");
+                        TotalItemsCollected += itemsCollected;
+                        LastCollectionTime = DateTime.Now;
+                        Dealer.SendTextMessage(Messages.GetRandomItemCollectionMessage(true));
+                    }
+                    else
+                    {
+                        Core.MelonLogger.Msg($"Dealer {Dealer.fullName} found no suitable items in storage {storageEntity.name}");
+                        Dealer.SendTextMessage(Messages.GetRandomItemCollectionMessage(false));
+                    }
+
+                    // --- Physical walk back to original position ---
+                    movement.SetDestinationPosition(homePosition);
+
+                    elapsed = 0f;
+                    while (!movement.isAtDestination && elapsed < timeout)
+                    {
+                        elapsed += Time.deltaTime;
+                        yield return null;
+                    }
+                    movement.EndSetDestination();
+
+                    Core.MelonLogger.Msg($"Dealer {Dealer.fullName} has returned from storage {storageEntity.name}");
                 }
                 else
                 {
-                    Core.MelonLogger.Msg($"Dealer {Dealer.fullName} found no suitable items in storage {storageEntity.name}");
-                    Dealer.SendTextMessage(Messages.GetRandomItemCollectionMessage(false));
-                }
+                    // --- Fallback: timer-based simulation ---
+                    yield return new WaitForSeconds(travelTime);
 
-                yield return new WaitForSeconds(travelTime);
-                Core.MelonLogger.Msg($"Dealer {Dealer.fullName} has returned from storage {storageEntity.name}");
+                    if (Dealer.currentContract != null && _canBeInturrupted)
+                    {
+                        Core.MelonLogger.Msg($"Dealer {Dealer.fullName} received a contract during travel, aborting item collection");
+                        yield break;
+                    }
+
+                    Core.MelonLogger.Msg($"Dealer {Dealer.fullName} reached storage {storageEntity.name}, collecting items");
+                    int itemsCollected = AddItemsFromStorage(storageEntity);
+
+                    if (itemsCollected > 0)
+                    {
+                        Core.MelonLogger.Msg($"Dealer {Dealer.fullName} collected {itemsCollected} items from {storageEntity.name}");
+                        TotalItemsCollected += itemsCollected;
+                        LastCollectionTime = DateTime.Now;
+                        Dealer.SendTextMessage(Messages.GetRandomItemCollectionMessage(true));
+                    }
+                    else
+                    {
+                        Core.MelonLogger.Msg($"Dealer {Dealer.fullName} found no suitable items in storage {storageEntity.name}");
+                        Dealer.SendTextMessage(Messages.GetRandomItemCollectionMessage(false));
+                    }
+
+                    yield return new WaitForSeconds(travelTime);
+                    Core.MelonLogger.Msg($"Dealer {Dealer.fullName} has returned from storage {storageEntity.name}");
+                }
             }
             finally
             {

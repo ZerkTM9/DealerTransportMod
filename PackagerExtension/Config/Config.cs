@@ -17,6 +17,7 @@ namespace DealerSelfSupplySystem
         public static MelonPreferences_Entry<float> dealerStorageCheckInterval;
         public static MelonPreferences_Entry<float> dealerCollectionShareRate;
         public static MelonPreferences_Entry<float> dealerTargetFillLevel;
+        public static MelonPreferences_Entry<bool> dealerPhysicalMovement;
 
         public Config()
         {
@@ -33,6 +34,9 @@ namespace DealerSelfSupplySystem
 
             dealerTargetFillLevel = balanceCategory.CreateEntry("DealerTargetFillLevel", 0.8f,
                 description: "Target inventory fill level for dealers (0.0-1.0). Dealers stop collecting once they reach this fill percentage.");
+
+            dealerPhysicalMovement = balanceCategory.CreateEntry("DealerPhysicalMovement", true,
+                description: "When true, dealers physically walk to storage to restock instead of instant/simulated travel. Falls back to simulation if NPC movement is unavailable.");
 
             dealerStorageUIClosedByDefault = balanceCategory.CreateEntry("DealerStorageUIClosedByDefault", true,
                 description: "Set the dealer storage UI to be collapsed by default.");
