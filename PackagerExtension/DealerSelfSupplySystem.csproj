@@ -20,6 +20,9 @@
 		<Reference Include="Assembly-CSharp">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
 		</Reference>
+		<Reference Include="Il2CppScheduleOne.Core">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppScheduleOne.Core.dll</HintPath>
+		</Reference>
 		<Reference Include="Il2CppAeLa.EasyFeedback">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppAeLa.EasyFeedback.dll</HintPath>
 		</Reference>
