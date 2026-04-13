@@ -256,9 +256,8 @@ namespace DealerSelfSupplySystem.DealerExtension
                     float elapsed = 0f;
                     while (elapsed < timeout)
                     {
-                        bool arrived = !movement.hasDestination ||
-                                       Vector3.Distance(Dealer.transform.position, storagePosition) <= ARRIVAL_DIST;
-                        if (arrived) break;
+                        if (Vector3.Distance(Dealer.transform.position, storagePosition) <= ARRIVAL_DIST)
+                            break;
 
                         if (Dealer.currentContract != null && _canBeInturrupted)
                         {
@@ -295,9 +294,8 @@ namespace DealerSelfSupplySystem.DealerExtension
                     elapsed = 0f;
                     while (elapsed < timeout)
                     {
-                        bool returned = !movement.hasDestination ||
-                                        Vector3.Distance(Dealer.transform.position, homePosition) <= ARRIVAL_DIST;
-                        if (returned) break;
+                        if (Vector3.Distance(Dealer.transform.position, homePosition) <= ARRIVAL_DIST)
+                            break;
                         elapsed += Time.deltaTime;
                         yield return null;
                     }
