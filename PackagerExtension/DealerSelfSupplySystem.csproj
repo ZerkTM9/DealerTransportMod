@@ -5,23 +5,301 @@
 		<Nullable>disable</Nullable>
 		<RootNamespace>DealerSelfSupplySystem</RootNamespace>
 		<IsPackable>false</IsPackable>
-		<AssemblyVersion>1.0.0.0</AssemblyVersion>
-		<FileVersion>1.0.0.0</FileVersion>
+		<AssemblyVersion>1.3.0.0</AssemblyVersion>
+		<FileVersion>1.3.0.0</FileVersion>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<AssemblyName>DealerSelfSupplySystem</AssemblyName>
 		<LangVersion>preview</LangVersion>
-		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<!-- Game Assemblies -->
 		<Reference Include="Assembly-CSharp-firstpass">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
 		</Reference>
 		<Reference Include="Assembly-CSharp">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
 		</Reference>
+
+		<!-- Unity Engine Modules -->
+		<Reference Include="UnityEngine">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GIModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.GIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ContentLoadModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ContentLoadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ProfilerModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ProfilerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PropertiesModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.PropertiesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityCurlModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityCurlModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityTestProtocolModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+
+		<!-- Unity Packages -->
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.AI.Navigation">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.AI.Navigation.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Burst.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst.Unsafe">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Burst.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Collections.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections.LowLevel.ILSupport">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem.ForUI">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Mathematics">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Mathematics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Postprocessing.Runtime">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Runtime">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Analytics">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Analytics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Configuration">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Device">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Device.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Environments.Internal">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Environments.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Internal">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Registration">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Registration.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Scheduler">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Scheduler.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Telemetry">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Telemetry.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Threading">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Threading.dll</HintPath>
+		</Reference>
+
+		<!-- Il2Cpp Schedule I Assemblies -->
 		<Reference Include="Il2CppScheduleOne.Core">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppScheduleOne.Core.dll</HintPath>
+		</Reference>
+
+		<!-- Il2Cpp Third Party -->
+		<Reference Include="Il2CppNewtonsoft.Json">
+			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppNewtonsoft.Json.dll</HintPath>
 		</Reference>
 		<Reference Include="Il2CppAeLa.EasyFeedback">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppAeLa.EasyFeedback.dll</HintPath>
@@ -38,9 +316,6 @@
 		<Reference Include="Il2CppAstarPathfindingProject">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppAstarPathfindingProject.dll</HintPath>
 		</Reference>
-		<Reference Include="Il2CppBoxophobic.AtmosphericHeightFog.Runtime">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppBoxophobic.AtmosphericHeightFog.Runtime.dll</HintPath>
-		</Reference>
 		<Reference Include="Il2CppBoxophobic.Utils.Scripts">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppBoxophobic.Utils.Scripts.dll</HintPath>
 		</Reference>
@@ -53,14 +328,8 @@
 		<Reference Include="Il2CppCorgiGodRays">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppCorgiGodRays.dll</HintPath>
 		</Reference>
-		<Reference Include="Il2CppEasyButtons">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppEasyButtons.dll</HintPath>
-		</Reference>
 		<Reference Include="Il2CppEdgegap">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppEdgegap.dll</HintPath>
-		</Reference>
-		<Reference Include="Il2CppFishNet.Demos">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppFishNet.Demos.dll</HintPath>
 		</Reference>
 		<Reference Include="Il2CppFishNet.Runtime">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppFishNet.Runtime.dll</HintPath>
@@ -94,9 +363,6 @@
 		</Reference>
 		<Reference Include="Il2Cppmscorlib">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
-		</Reference>
-		<Reference Include="Il2CppNewtonsoft.Json">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppNewtonsoft.Json.dll</HintPath>
 		</Reference>
 		<Reference Include="Il2CppPathfinding.ClipperLib">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2CppPathfinding.ClipperLib.dll</HintPath>
@@ -173,276 +439,8 @@
 		<Reference Include="Il2Cpp__Generated">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Il2Cpp__Generated.dll</HintPath>
 		</Reference>
-		<Reference Include="Unity.AI.Navigation">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.AI.Navigation.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Burst">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Burst.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Burst.Unsafe">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Burst.Unsafe.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Collections">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Collections.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Collections.LowLevel.ILSupport">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.InputSystem">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.InputSystem.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.InputSystem.ForUI">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.InputSystem.RebindingUI">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.InputSystem.RebindingUI.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Mathematics">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Mathematics.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Postprocessing.Runtime">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.RenderPipelines.Core.Runtime">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.RenderPipelines.Universal.Runtime">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Services.Analytics">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Analytics.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Services.Core.Configuration">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Configuration.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Services.Core.Device">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Device.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Services.Core">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Services.Core.Environments.Internal">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Environments.Internal.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Services.Core.Internal">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Internal.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Services.Core.Registration">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Registration.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Services.Core.Scheduler">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Scheduler.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Services.Core.Telemetry">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Telemetry.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Services.Core.Threading">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Threading.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.TextMeshPro">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.TextMeshPro.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.Timeline">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\Unity.Timeline.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.AccessibilityModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.AIModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AIModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.AndroidJNIModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AndroidJNIModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.AnimationModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.ARModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ARModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.AssetBundleModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.AudioModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.ClothModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.ContentLoadModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ContentLoadModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.CoreModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.CrashReportingModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.DirectorModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.DirectorModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.DSPGraphModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.DSPGraphModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.GameCenterModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.GIModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.GIModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.GridModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.GridModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.HotReloadModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.HotReloadModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.ImageConversionModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.IMGUIModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.InputLegacyModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.InputModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.InputModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.JSONSerializeModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.JSONSerializeModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.LocalizationModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.LocalizationModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.ParticleSystemModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.PerformanceReportingModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.Physics2DModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.PhysicsModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.ProfilerModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ProfilerModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.PropertiesModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.PropertiesModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.ScreenCaptureModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.SharedInternalsModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.SharedInternalsModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.SpriteMaskModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.SpriteShapeModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteShapeModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.StreamingModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.StreamingModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.SubstanceModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.SubstanceModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.SubsystemsModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.SubsystemsModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.TerrainModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.TerrainPhysicsModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.TextCoreFontEngineModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.TextCoreTextEngineModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.TextRenderingModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.TilemapModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TilemapModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.TLSModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.TLSModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UI">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UIElementsModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UIModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UmbraModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UmbraModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UnityAnalyticsModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UnityConnectModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UnityCurlModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityCurlModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UnityTestProtocolModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityTestProtocolModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UnityWebRequestModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.VehiclesModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.VFXModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.VFXModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.VideoModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.VRModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.WindModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.WindModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.XRModule">
-			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
-		</Reference>
+
+		<!-- MelonLoader — still in MelonLoader folder, not in Managed -->
 		<Reference Include="MelonLoader">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\net6\MelonLoader.dll</HintPath>
 		</Reference>
@@ -455,7 +453,6 @@
 		<Reference Include="Il2CppInterop.Common">
 			<HintPath>C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
 		</Reference>
-
 	</ItemGroup>
 
 	<PropertyGroup>
@@ -469,6 +466,7 @@
 		<Compile Include="DealerExtension\DealerExtendedBrain.cs" />
 		<Compile Include="DealerExtension\DealerExtensionUI.cs" />
 		<Compile Include="DealerExtension\DealerStorageManager.cs" />
+		<Compile Include="DealerExtension\StorageReservationLedger.cs" />
 		<Compile Include="Patches\DealerPatches.cs" />
 		<Compile Include="Patches\SavePatch.cs" />
 		<Compile Include="Patches\StorageEntityOpened.cs" />
@@ -478,7 +476,7 @@
 		<Compile Include="Utils\GameUtils.cs" />
 		<Compile Include="Utils\Messages.cs" />
 	</ItemGroup>
-	
+
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;C:\Users\zerkt\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ScheduleI\profiles\solo\Mods&quot;" />
 	</Target>

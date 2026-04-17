@@ -1,25 +1,28 @@
-﻿namespace DealerSelfSupplySystem.Utils
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+namespace DealerSelfSupplySystem.Utils
 {
     public static class Messages
     {
         public static List<string> DealerItemCollectionMessages = new List<string>
         {
-            "Yo boss! Just hit the stash. This shit's fire, no cap.",
+            "Yo boss! Just hit the stash. This shit is fire, no cap.",
             "Grabbed that product from the spot. Five-O ain't see nothin'.",
             "Storage run complete. Got that good-good for the fiends.",
             "Snatched some merch from the back. We movin' weight tonight!",
             "Just re-upped from storage. Clientele been blowin' up my phone.",
-            "Raided the stash spot. We 'bout to run the block with this batch.",
+            "Raided the stash spot. We bout to run the block with this batch.",
             "Yo, I just touched the package. This that top-shelf shit right here.",
             "Storage run was clean. Ain't nobody peepin' our moves.",
             "Got that work from the back. Time to flood the streets, ya dig?",
             "Just secured the bag from storage. We eatin' good tonight!",
             "Product secured, ready to slang. These streets gonna pay us, feel me?",
             "Took that heat from storage. Trap about to be jumpin'!",
-            "Got that pack from the back. Fiends gonna be lined up 'round the block.",
-            "Straight murked that storage inventory. We 'bout to make it rain!",
+            "Got that pack from the back. Fiends gonna be lined up round the block.",
+            "Straight murked that storage inventory. We bout to make it rain!",
             "Finessed some product from storage. Time to tax these customers.",
-            "Storage run complete. Got that gas that'll have 'em coming back.",
+            "Storage run complete. Got that gas that'll have em coming back.",
             "Just hit a lick on our own stash. That's smart business, ya heard?",
             "Got them thangs from storage. Custies better have my paper ready.",
             "Inventory grabbed. Bout to flip this shit and double up.",
@@ -38,7 +41,7 @@
             "Storage empty as my pockets before this job. We need to fix that ASAP.",
             "Can't find what I need in this bitch. How we supposed to trap with no pack?",
             "Yo, storage situation is FUBAR. Need that re-up yesterday.",
-            "Stash spsot drier than the Sahara. We 'bout to lose our corner if we don't re-up.",
+            "Stash spot drier than the Sahara. We bout to lose our corner if we don't re-up.",
             "Storage run was dead. No product means no paper, and that's bad business.",
             "Came up empty-handed. The block gonna think we fell off if we don't re-up soon.",
             "Storage got nothin' I can push. Fiends blowin' up my phone for nothin'.",
@@ -74,24 +77,53 @@
             "I ain't got a twin brother hidin' somewhere! Already committed to another rack, boss."
         };
 
+        // Messages sent when a dealer deposits their cash during a storage run.
+        // The {0} placeholder is replaced with the formatted dollar amount.
+        public static List<string> DealerCashDepositMessages = new List<string>
+        {
+            "Dropping off {0} boss. Straight from the block to your pockets.",
+            "Here's {0} from today's work. Streets been good to us.",
+            "Leaving {0} at the spot. We eating good out here.",
+            "Got {0} for you boss. Fiends kept it moving today.",
+            "Depositing {0}. The block been real generous, ya feel me?",
+            "Here's your cut boss, {0}. Don't say I never did nothin' for you.",
+            "Dropping {0} in the stash. Trap been jumpin' today no cap.",
+            "{0} from the streets to you boss. We running this block right.",
+            "Left you {0} at the rack. Today was a good day out there.",
+            "Here's {0} boss. Custies been loyal, money been flowing.",
+            "Bringing that bread, {0}. Your investment is paying off.",
+            "Yo boss, {0} from today's run. We making moves out here.",
+            "{0} deposited. The corner been busy, just how we like it.",
+            "Dropping the earnings, {0}. Another day another dollar, feel me?",
+            "Here's {0} from the hustle. Streets been good boss."
+        };
+
         public static string GetRandomItemCollectionMessage(bool success)
         {
             if (success)
             {
-                int index = UnityEngine.Random.Range(0, DealerItemCollectionMessages.Count);
+                int index = Random.Range(0, DealerItemCollectionMessages.Count);
                 return DealerItemCollectionMessages[index];
             }
             else
             {
-                int index = UnityEngine.Random.Range(0, DealerNoItemsFoundMessages.Count);
+                int index = Random.Range(0, DealerNoItemsFoundMessages.Count);
                 return DealerNoItemsFoundMessages[index];
             }
         }
 
         public static string GetRandomDealerAlreadyAssignedMessage()
         {
-            int index = UnityEngine.Random.Range(0, DealerAlreadyAssignedMessages.Count);
+            int index = Random.Range(0, DealerAlreadyAssignedMessages.Count);
             return DealerAlreadyAssignedMessages[index];
+        }
+
+        // Returns a random cash deposit message with the amount formatted inline.
+        public static string GetRandomCashDepositMessage(float amount)
+        {
+            int index = Random.Range(0, DealerCashDepositMessages.Count);
+            string amountFormatted = "$" + amount.ToString("F0");
+            return string.Format(DealerCashDepositMessages[index], amountFormatted);
         }
     }
 }
